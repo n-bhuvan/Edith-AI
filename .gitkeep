@@ -1,0 +1,11 @@
+frontend/.gitkeep
+backend/.gitkeep
+agents/.gitkeep
+mcp/.gitkeep
+database/.gitkeep
+dataset/.gitkeep
+docs/.gitkeep
+deployment/.gitkeep
+prompts/.gitkeep
+tests/.gitkeep
+.github/.gitkeep
