@@ -6,7 +6,8 @@ import './globals.css';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 text-gray-900 flex h-screen overflow-hidden">
+      {/* Add suppressHydrationWarning here to stop extension conflicts */}
+      <body className="bg-gray-50 text-gray-900 flex h-screen overflow-hidden" suppressHydrationWarning>
         <Sidebar />
         <div className="flex-1 flex flex-col">
           <Navbar />
