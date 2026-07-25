@@ -1,0 +1,4 @@
+machine_type,annual_maintenance,retrofit_cost,replacement_cost,expected_life_years,energy_cost_per_year,resale_value,production_loss_per_day
+L,2500,8000,25000,5,1500,5000,800
+M,4500,15000,45000,7,2800,9000,1500
+H,7000,25000,70000,10,4200,15000,2500

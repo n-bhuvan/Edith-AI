@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "csv-parser": "^3.2.1",
+    "numpy": "^0.0.1",
+    "pandas": "^0.0.3"
+  }
+}

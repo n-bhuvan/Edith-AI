@@ -1,6 +1,6 @@
 import { McpApp, Module, ConfigModule } from '@nitrostack/core';
-import { CalculatorModule } from './modules/calculator/calculator.module.js';
 import { SystemHealthCheck } from './health/system.health.js';
+import { ManufacturingModule } from './modules/manufacturing/manufacturing.module.js';
 
 /**
  * Root Application Module
@@ -11,7 +11,7 @@ import { SystemHealthCheck } from './health/system.health.js';
 @McpApp({
   module: AppModule,
   server: {
-    name: 'calculator-server',
+    name: 'edith-ai-server',
     version: '1.0.0'
   },
   logging: {
@@ -23,7 +23,7 @@ import { SystemHealthCheck } from './health/system.health.js';
   description: 'Root application module',
   imports: [
     ConfigModule.forRoot(),
-    CalculatorModule
+    ManufacturingModule
   ],
   providers: [
     // Health Checks
