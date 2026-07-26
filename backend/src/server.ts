@@ -1,82 +1,21 @@
 import dotenv from "dotenv";
-
 dotenv.config();
 
-
-import express from "express";
-import studentRoutes from "./routes/studentRoutes";
-import authRoutes from "./routes/authRoutes";
+import app from "./app";
+import chatApp from "./chatApp";
 
 
-const app = express();
+const PORT = process.env.PORT || 3000;
+const PORT1 = process.env.PORT1 || 5000;
 
 
-// ===========================
-// Middleware
-// ===========================
-app.use(express.json());
-
-
-
-// ===========================
-// Test API
-// ===========================
-app.get("/hello", (req, res) => {
-
-    res.json({
-        message: "Hello World"
-    });
-
+// Main Backend Server
+app.listen(PORT, () => {
+    console.log(`Main server running on port ${PORT}`);
 });
 
 
-
-// ===========================
-// Authentication Routes
-// ===========================
-app.use("/auth", authRoutes);
-
-
-
-// ===========================
-// Student Routes
-// ===========================
-app.use("/students", studentRoutes);
-
-
-
-// ===========================
-// Global Error Handler
-// ===========================
-app.use(
-    (
-        err: any,
-        req: express.Request,
-        res: express.Response,
-        next: express.NextFunction
-    ) => {
-
-        console.error(err);
-
-        res.status(500).json({
-            success: false,
-            message: "Internal Server Error"
-        });
-
-    }
-);
-
-
-
-// ===========================
-// Server Start
-// ===========================
-
-const PORT = process.env.PORT || 3000;
-
-
-app.listen(PORT, () => {
-
-    console.log(`Server is running on port ${PORT}`);
-
+// Chat Server
+chatApp.listen(PORT1, () => {
+    console.log(`Chat server running on port ${PORT1}`);
 });
